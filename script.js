@@ -95,53 +95,6 @@ function loadShipments(text){
 
 }
 
-document.getElementById("nextBtn").addEventListener("click",()=>{
-
-    if(currentIndex < shipments.length-1){
-
-        currentIndex++;
-
-        displayShipment();
-
-    }
-
-});
-
-document.getElementById("prevBtn").addEventListener("click",()=>{
-
-    if(currentIndex>0){
-
-        currentIndex--;
-
-        displayShipment();
-
-    }
-
-});
-
-document.addEventListener("keydown", (event) => {
-
-    if (shipments.length === 0) return;
-
-    if (event.key === "ArrowRight" || event.key === " ") {
-
-        if (currentIndex < shipments.length - 1) {
-            currentIndex++;
-            displayShipment();
-        }
-
-    }
-
-    if (event.key === "ArrowLeft") {
-
-        if (currentIndex > 0) {
-            currentIndex--;
-            displayShipment();
-        }
-
-    }
-
-});
 
 window.addEventListener("paste", (event)=>{
 
@@ -164,3 +117,20 @@ document.getElementById("fullscreenBtn").addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", updateCurrentShipment);
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+
+    shipments = [];
+
+    document.getElementById("barcodeContainer").innerHTML = "";
+
+    input.value = "";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    input.focus();
+
+});
