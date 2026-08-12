@@ -27,33 +27,24 @@ svg{
 }
 
 .barcodeCard {
-
     background: #333;
-
     width: 90%;
-
-    margin: 40px auto;
-
-    padding: 40px;
-
-    border-radius: 10px;
-
+    margin: 3px auto;
+    padding: 4px;
+    border-radius: 6px;
 }
 
 .barcodeCard svg {
-
     background: white;
-
-    width: 100%;
-
-    padding: 20px;
-
+    width: 600px;
+    max-width: 90%;
+    height: auto;
+    padding: 2px;
 }
 
 .barcodeCard h2 {
-
-    margin: 20px 0;
-
+    margin: 1px 0;
+    font-size: 14px;
 }
 
 .currentShipment{
@@ -61,20 +52,6 @@ svg{
     border:6px solid #00ff00;
 
     box-shadow:0 0 30px #00ff00;
-
-}
-
-html {
-
-    scroll-snap-type: y mandatory;
-
-    scroll-behavior: smooth;
-
-}
-
-.barcodeCard {
-
-    scroll-snap-align: center;
 
 }
 

@@ -33,11 +33,11 @@ function displayShipments() {
         container.appendChild(card);
 
         JsBarcode(`#barcode${index}`, id, {
-            format: "CODE128",
-            width: 4,
-            height: 180,
-            displayValue: false,
-            margin: 20
+           format: "CODE128",
+           width: 2.5,
+           height: 90,
+           displayValue: false,
+           margin: 10
         });
 
     });
